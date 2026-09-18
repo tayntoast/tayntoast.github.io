@@ -103,7 +103,9 @@ html {
   }
 }
 
-.recent-posts-container .post-list {
+.recent-posts-container .post-list,
+.post-content .post-list {
+  padding-top: 15px !important;
   padding-left: 40px !important;
   text-align: left;
 }
