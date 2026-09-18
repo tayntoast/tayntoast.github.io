@@ -1,0 +1,56 @@
+---
+layout: page
+---
+<div class="intro-container">
+  <img src="{{ '/assets/images/profile.png' | relative_url }}" class="profile-img" alt="Tay Zar Lin">
+  
+  <div class="intro-text">
+    <h1>Hi, it's nice to meet you! 👋</h1>
+
+    <p>I am a guy who plays with data, drinks too much coffee, and enjoys memes. Let me explore my passion and share what I learn along the way.</p>
+
+    <div class="social-links">
+      <a href="https://github.com/tayzlin" target="_blank" rel="noopener noreferrer" style="color: #24292e;">
+        <i class="fa-brands fa-github"></i>
+      </a>
+      <a href="https://x.com/tayzlin" target="_blank" rel="noopener noreferrer" style="color: #24292e;">
+        <i class="fa-brands fa-x-twitter"></i>
+      </a>
+      <a href="https://linkedin.com/in/tayzarlin" target="_blank" rel="noopener noreferrer" style="color: #0a66c2;">
+        <i class="fa-brands fa-linkedin"></i>
+      </a>
+      <a href="mailto:tayzarlinofficial@gmail.com" target="_blank" rel="noopener noreferrer" style="color: #d44638;">
+        <i class="fa-solid fa-envelope"></i>
+      </a>
+    </div>
+  </div> 
+</div>
+
+<div class="recent-posts-container">
+  <h3>Posts</h3>
+  <p>I started blogging back in 2012. This is where I share things I’ve picked up along the way — thoughts, stories, and little things.</p>
+
+  <ul class="post-list">
+    {% for post in site.posts limit: 25 %}
+      <li>
+        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+        <h3>
+          <a class="post-link" href="{{ post.url | relative_url }}">
+            {{ post.title | escape }}
+          </a>
+        </h3>
+      </li>
+    {% endfor %}
+  </ul>
+</div>
+
+<div>
+  <h3>A little about me</h3>
+  <p>Hi, I’m Tay. Currently, most of my time is spent diving into data-driven insights and finding practical ways to drive project growth. I enjoy taking complex concepts, breaking them down, and seeing how raw data can be turned into meaningful strategy.</p>
+  
+  <p>I created this site as my personal digital notebook. I’ve always believed that real learning happens when you start building, experimenting, and sharing the process with others.</p>
+  
+  <p>Here, you’ll find my honest thoughts, project takeaways, and notes on whatever I’m exploring at the moment. It’s a space for me to reflect, document my growth, and hopefully share a few useful insights along the way.</p>
+
+  <p>Thanks for stopping by, and feel free to explore!</p>
+</div>

@@ -1,0 +1,300 @@
+// Placeholder to allow defining custom styles that override everything else.
+// (Use `_sass/minima/custom-variables.scss` to override variable defaults)
+
+// --- Base Typography & Layout ---
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif !important;
+  line-height: 1.7;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.25;
+}
+
+html {
+  scrollbar-gutter: stable;
+}
+
+// General Headings
+.post-header h2, .post-header h3, 
+.post-content h1, .post-content h2, .post-content h3,
+.page-heading,
+.site-nav .page-link {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif !important;
+  font-weight: 700 !important;
+}
+
+// --- Header & Navigation ---
+.site-header { 
+  background-color: #fdfdfd; 
+  border: none !important; 
+}
+
+.site-logo {
+  max-height: 30px;
+  width: auto;
+  vertical-align: middle;
+}
+
+.page-link { 
+  color: #111 !important; 
+  text-decoration: none !important; 
+}
+
+// Fix Hamburger Icon Line Duplication
+.site-nav .menu-icon svg path {
+  fill: #ff5733; 
+}
+
+.site-nav .menu-icon:hover svg path {
+  fill: #007bff; 
+}
+
+// --- Homepage Intro Container ---
+.intro-container {
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+  gap: 40px;  
+
+  .profile-img {
+    width: 150px !important;          
+    height: 150px !important;
+    border-radius: 50%; 
+    border: 4px solid #fff; 
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);    
+    object-fit: cover;
+    flex-shrink: 0;       
+  }
+
+  .intro-text {
+    h1 {
+      margin-top: 0;     
+      border-bottom: none;
+    }
+    
+    p {
+      margin-bottom: 8px;
+      line-height: 1.6;
+      color: #333;         
+    }
+
+    .social-links {
+      display: flex;      
+      gap: 10px;           
+      align-items: center;
+
+      span {
+        display: inline-flex;
+      }
+
+      a {
+        font-size:20px;
+        text-decoration: none !important;
+        display: block;
+        line-height: 0; 
+      }
+
+      a:hover svg {
+        transform: scale(1.15);
+        transition: transform 0.2s ease;
+      }
+    }
+  }
+}
+
+.recent-posts-container {
+  max-width: 650px;
+  margin: 40px auto 0 auto;
+  text-align: left;
+}
+
+
+// --- Blog Posts & Content Styling ---
+.page-content {
+    padding: 50px 0 !important;
+}
+
+.post-title, 
+.post-header h1 {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif !important;
+  font-weight: 700 !important;
+  font-size: 32px !important;
+  letter-spacing: normal !important;
+  margin-top: 25px !important;
+  margin-bottom: 15px !important;
+}
+
+.post-header {
+  border-bottom: none !important;
+}
+
+// Post List Styling
+.post-list {
+  margin: 0 !important; 
+  padding: 0 !important; 
+  list-style: none;
+  
+  li {
+    margin-bottom: 0 !important; 
+    padding-bottom: 8px !important; 
+    display: flex !important; 
+    align-items: baseline;
+    
+    h3 { 
+      display: inline !important; 
+      margin: 0 !important; 
+      line-height: 1.2 !important; 
+      font-size: 16px !important; 
+      font-weight: 500 !important; 
+    }
+  }
+}
+
+.post-content blockquote, 
+.page-content blockquote {
+  margin-left: 25px !important; 
+  padding-left: 15px !important;
+  padding-right: 15px !important;
+  border-left: 4px solid #e8e8e8 !important; 
+  color: #828282 !important; 
+}
+
+.post-link { 
+  font-size: 16px !important; 
+  color: #111 !important; 
+  text-decoration: none !important; 
+  margin-left: 20px; 
+  
+  &:hover { 
+    text-decoration: underline !important; 
+  } 
+}
+
+.post-meta { 
+  font-size: 14px; 
+  color: #999; 
+  min-width: 100px; 
+  display: inline-block !important; 
+}
+
+.post-content ul li {
+  line-height: 1.6 !important;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+// Blog Post Image & Figure Styling
+.post-content figure {
+  text-align: center;
+  margin: 30px 0;
+
+  img {
+    display: block;
+    margin: 0 auto;
+    max-width: 80%;
+    height: auto;
+    border-radius: 6px;
+  }
+
+  figcaption {
+    font-size: 14px;
+    color: #666;
+    margin-top: 8px;
+    font-style: italic;
+  }
+}
+
+// --- Skill Buttons & Badges ---
+.skill-btn {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif !important;
+  display: inline-block;
+  background-color: #f1f3f5;
+  color: #212529;
+  font-size: 13px;
+  font-weight: 500;
+  padding: 4px 12px;
+  margin: 3px 4px 6px 0;
+  border-radius: 6px;
+  border: 1px solid #e9ecef;
+  transition: all 0.2s ease;
+
+  &:hover {
+    background-color: #e9ecef;
+    border-color: #dee2e6;
+    transform: translateY(-1px);
+  }
+}
+
+// --- Footer Content ---
+.site-footer {
+  border-top: none !important;
+
+  .footer-col-wrapper {
+    display: none;
+  }
+}
+
+// --- Mobile Responsive Settings ---
+@media screen and (max-width: 600px) {
+  .site-nav .menu-icon {
+    float: right;
+    width: 36px;
+    height: 36px;
+    display: flex !important;
+    align-items: center;    
+    justify-content: center;  
+    line-height: 0;
+    padding: 0 !important;
+    cursor: pointer;
+
+    svg {
+      display: block;
+      margin: 0;
+    }
+  }
+
+  .intro-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    
+    .intro-text h1 {
+      margin-top: 15px;
+    }
+    
+    .social-links {
+      display: flex;
+      justify-content: center; 
+      gap: 10px;              
+      margin-top: 15px;       
+      width: 100%;             
+    }
+  }
+
+  .post-title, 
+  .post-header h1 {
+    font-size: 26px !important;
+    letter-spacing: normal !important;
+    line-height: 1.5 !important;
+    margin-top: 5px !important;
+    margin-bottom: 12px !important;
+  }
+
+  .post-header {
+    margin-bottom: 20px !important;
+  }
+
+  .post-list li { 
+    flex-wrap: wrap; 
+  }
+  
+  .post-meta { 
+    width: 100%; 
+    margin-bottom: 4px; 
+  }
+  
+  .post-link { 
+    margin-left: 0; 
+  }
+}

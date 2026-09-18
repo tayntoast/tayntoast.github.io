@@ -1,0 +1,48 @@
+<link id="fa-stylesheet" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.0.0/css/all.min.css">
+
+<footer class="site-footer h-card">
+  <data class="u-url" value="{{ '/' | relative_url }}"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+      {%- if site.author %}
+        <ul class="contact-list">
+          {% if site.author.name -%}
+            <li class="p-name">{{ site.author.name | escape }}</li>
+          {% endif -%}
+          {% if site.author.email -%}
+            <li><a class="u-email" href="mailto:{{ site.author.email }}">{{ site.author.email }}</a></li>
+          {%- endif %}
+        </ul>
+      {%- endif %}
+      </div>
+
+      <div class="footer-col">
+        <p>{{ site.description | escape }}</p>
+      </div>
+    </div>
+
+    <div class="social-links" style="text-align: center; margin-bottom: 10px;">
+      <a href="https://github.com/tayzlin" target="_blank" rel="noopener noreferrer" style="margin: 0 5px; color: #24292e; font-size: 20px; text-decoration: none;">
+        <i class="fa-brands fa-github"></i>
+      </a>
+      <a href="https://x.com/tayzlin" target="_blank" rel="noopener noreferrer" style="margin: 0 5px; color: #24292e; font-size: 20px; text-decoration: none;">
+        <i class="fa-brands fa-x-twitter"></i>
+      </a>
+      <a href="https://linkedin.com/in/tayzarlin" target="_blank" rel="noopener noreferrer" style="margin: 0 5px; color: #0a66c2; font-size: 20px; text-decoration: none;">
+        <i class="fa-brands fa-linkedin"></i>
+      </a>
+      <a href="mailto:tayzarlinofficial@gmail.com" style="margin: 0 5px; color: #d44638; font-size: 20px; text-decoration: none;">
+        <i class="fa-solid fa-envelope"></i>
+      </a>
+    </div>
+
+    <div class="copyright" style="font-size: 14px; color: #666; text-align: center; margin-top: 15px;">
+        {{ site.footer_content }}
+    </div>
+
+  </div>
+
+</footer>

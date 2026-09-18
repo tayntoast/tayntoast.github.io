@@ -1,0 +1,27 @@
+title: "Tay N Toast"
+description: "Thoughts, stories, and little things"
+theme: minima
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-paginate
+
+paginate: 15
+paginate_path: "/blog/page:num/"
+
+header_pages:
+  - about-me.html
+  - blog/index.html
+  - toolbox.html
+
+# Minima-specific settings
+minima:
+  skin: auto
+  hide_site_feed_link: true
+ 
+baseurl: ""
+github_username: tayzlin
+url: "https://tayntoast.github.io"
+
+footer_content: "Copyright © 2026 Tay N Toast. All rights reserved."
